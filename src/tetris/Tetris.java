@@ -104,9 +104,9 @@ public class Tetris extends JPanel {
         TimerTask task = new TimerTask() {
             public void run() {
                 // Adjust speed based on score
-                speed = 40 - (score / 1000);// Calculate speed: higher score means faster speed
+                speed = 30 - (score / 50);// Calculate speed: higher score means faster speed
                 speed = speed <= 1 ? 1 : speed;// Ensure speed does not go below 1
-                level = 41 - speed;
+                level = 31 - speed;
                 if (index % speed == 0) {
                     if (state == RUNNING) {
                         softDropAction();
